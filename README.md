@@ -10,12 +10,29 @@
 - **Airflow**: scheduled updates  
 
 ## 🗂 Project Structure
-equity-index-telemetry-dashboard/ ├── data/ # sample or raw data ├── db/ # index.db telemetry database ├── src/ # core modules │ ├── data_fetcher.py │ ├── index_calculator.py │ ├── telemetry_logger.py │ └── dashboard.py ├── airflow/ # scheduling DAG │ └── dags/update_index.py ├── tests/ # unit tests ├── requirements.txt └── README.md
+```graphql
 
-bash
-Copy
-Edit
-
+equity-index-telemetry-dashboard/
+├── data/                     # raw or sample data files
+│   └── dummy/                # optional: dummy CSVs for testing
+├── db/                       
+│   └── index.db              # SQLite database file for index values & telemetry
+├── src/                      
+│   ├── __init__.py           
+│   ├── data_fetcher.py       # pulls stock prices
+│   ├── index_calculator.py   # computes custom index
+│   ├── telemetry_logger.py   # logs status & metrics
+│   └── dashboard.py          # Streamlit app
+├── airflow/                  
+│   └── dags/                 
+│       └── update_index.py   # Airflow DAG to run updates periodically
+├── tests/                    
+│   ├── test_data_fetcher.py  
+│   ├── test_index_calculator.py
+│   └── test_telemetry_logger.py
+├── requirements.txt          
+└── README.md                 
+```
 ## ⚙️ Setup & Installation
 
 1. **Clone repo**  
