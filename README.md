@@ -56,16 +56,20 @@ equity-index-telemetry-dashboard/
     ```
 
 ## 🏃‍♂️ Usage
-Run locally
+- Run locally
 ```bash
 streamlit run src/dashboard.py
-Start Airflow
+```
+
+- Start Airflow
+```
 airflow standalone
+# DAG equity_index_telemetry will run hourly
+
 ```
 
 
-# DAG equity_index_telemetry will run hourly
-🧪 Testing
+## 🧪 Testing
 ```bash
 pytest tests/
 ```
