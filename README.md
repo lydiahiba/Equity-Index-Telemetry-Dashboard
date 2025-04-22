@@ -86,5 +86,6 @@ pytest tests/
 
  - More sophisticated index rebalancing
 
-🤝 Contributing
+### 🤝 Contributing
+
 Feel free to open issues or PRs—happy to collaborate!
